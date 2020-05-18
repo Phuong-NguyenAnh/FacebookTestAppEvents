@@ -6,18 +6,17 @@
 	<meta charset='UTF-8'>
 	<script>
 		window.fbAsyncInit = function() {
-		  FB.init({
-			appId      : '2653418381645107',
-			xfbml      : true,
-			version    : 'v7.0'
-		  });
-		  FB.AppEvents.logPageView();
+			FB.init({
+				appId: '2653418381645107',
+				xfbml: true,
+				version: 'v7.0'
+			});
+			FB.AppEvents.logPageView();
 		};
-	  </script>
-	  
-	  <script async defer 
-		src="https://connect.facebook.net/en_US/sdk.js"></script>
-	  </script>
+	</script>
+
+	<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+	</script>
 </head>
 
 <body>
@@ -25,6 +24,16 @@
 	<script>
 		console.log('loaded')
 	</script>
+	<script>
+		function OnButtonClicked() {
+			var eventName = "press_button_clicked"
+			console.log(eventName)
+			FB.AppEvents.logEvent(eventName);
+		}
+	</script>
+	<button id="button" onclick="OnButtonClicked()">
+		Press!
+	</button>
 </body>
 
 </html>

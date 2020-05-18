@@ -28,7 +28,7 @@
 		function OnButtonClicked() {
 			var eventName = "press_button_clicked"
 			console.log(eventName)
-			FB.AppEvents.logEvent(eventName);
+			FB.AppEvents.logEvent(eventName, { pressCount: 1 });
 		}
 	</script>
 	<button id="button" onclick="OnButtonClicked()">
